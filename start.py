@@ -4,13 +4,12 @@ from aiogram import Bot, Dispatcher, executor, types
 import django
 os.environ['DJANGO_SETTINGS_MODULE'] = 'TelegramBotNote.settings'
 django.setup()
+from django.conf import settings
 from asgiref.sync import sync_to_async
 from core.models import Note
 
 
-API_TOKEN = "1232067764:AAH9Y6sts9-rcoLAnAI5CH--jzsUBwRjkGc"
-
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=settings.TELEGRAM_BOT_TOKEN)
 dp = Dispatcher(bot)
 
 
