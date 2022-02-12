@@ -1,6 +1,6 @@
 build:
   docker:
-    worker: Dockerfile
+    web: Dockerfile
 
 run:
-  worker: python manage.py migrate && python start.py
+  web: python manage.py migrate && python start.py
